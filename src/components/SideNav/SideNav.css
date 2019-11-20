@@ -1,0 +1,17 @@
+.side-nav {
+  border: 1px solid #4189c7;
+  border-radius: 5px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.side-nav__h3 {
+  background-color: #4189c7;
+  margin: 0;
+  padding: 5px;
+  color: white;
+}
+.side-nav__li,
+.side-nav__a {
+  color: #4189c7;
+}
