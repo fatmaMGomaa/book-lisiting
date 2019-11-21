@@ -5,11 +5,13 @@
   padding: 0 20px;
 }
 .main-header a,
-.main-header button {
+.main-header button,
+.badge {
   color: white;
 }
 .main-header__h1 h1 {
   margin: 5px 0 0;
+  display: inline-block;
 }
 .main-header__nav {
   display: flex;
@@ -29,16 +31,16 @@
 }
 
 .badge {
-  font-size: 35%;
+  font-size: 80%;
   background-color: #d4554e;
   padding: 5px;
+  margin-left: 10px;
   display: inline-block;
-  vertical-align: middle;
 }
 
 .btn,
 .badge {
-  border-radius: 10px;
+  border-radius: 7px;
   border: none;
 }
 .main-header__nav button {
