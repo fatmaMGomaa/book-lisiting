@@ -22,7 +22,10 @@ class Header extends React.Component {
         style={{ background: theTheme.headerColor }}
       >
         <Link to={`/`} className="main-header__h1">
-          <h1>Book Listing</h1>
+          <h1>
+            Book Listing{" "}
+            {editMode ? <span className="badge">edit mode</span> : null}
+          </h1>
         </Link>
         <div className="main-header__nav">
           <Nav itemsArray="" />

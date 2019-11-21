@@ -5,9 +5,17 @@ a {
 .app-container {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .app-container .left {
   width: 25%;
+}
+
+.app-container .right {
+  width: 70%;
+}
+.app-container .left,
+.app-container .right {
+  margin-top: 20px;
 }

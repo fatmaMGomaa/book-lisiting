@@ -1,0 +1,32 @@
+.card {
+  width: 95%;
+  height: 180px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #999999;
+  color: #333333;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card__img__div {
+  width: 20%;
+}
+
+.card__img__div img {
+  display: block;
+  width: 150px;
+  height: 150px;
+}
+
+.card__info__div {
+  width: 80%;
+  height: 95%;
+  text-align: justify;
+}
+
+.card__info__div h1 {
+  font-size: 130%;
+}

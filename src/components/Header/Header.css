@@ -22,12 +22,24 @@
   display: inline-block;
 }
 .btn {
-  padding: 10px;
   margin: 5px;
-  border-radius: 10px;
-  border: none;
+  padding: 10px;
   background: #008cfb;
   outline: none;
+}
+
+.badge {
+  font-size: 35%;
+  background-color: #d4554e;
+  padding: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.btn,
+.badge {
+  border-radius: 10px;
+  border: none;
 }
 .main-header__nav button {
   height: 40px;
