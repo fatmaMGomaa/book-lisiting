@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Nav = props => {
-  if (Array.isArray(props.itemsArray) && props.itemsArray.length > 1) {
+  if (Array.isArray(props.itemsArray) && props.itemsArray.length > 0) {
     return (
       <nav>
         <ul>

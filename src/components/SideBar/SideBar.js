@@ -1,15 +1,19 @@
 import React from "react";
-import data from "../../books.json";
 import SideNav from "../SideNav/SideNav.js";
+import { DataContext } from "../contexts/DataContext";
 
-const SideBar = props => {
-  const { books, authors, categories } = data;
-  return (
-    <React.Fragment>
-      <SideNav name="Authors" items={authors} />
-      <SideNav name="Categories" items={categories} />
-    </React.Fragment>
-  );
-};
+class SideBar extends React.Component {
+  static contextType = DataContext;
+
+  render() {
+    let { authors, categories } = this.context;
+    return (
+      <React.Fragment>
+        <SideNav name="Authors" items={authors} />
+        <SideNav name="Categories" items={categories} />
+      </React.Fragment>
+    );
+  }
+}
 
 export default SideBar;

@@ -3,7 +3,6 @@
   display: flex;
   justify-content: space-between;
   padding: 0 20px;
-  background-color: #333333;
 }
 .main-header a,
 .main-header button {
@@ -31,7 +30,6 @@
   outline: none;
 }
 .main-header__nav button {
-  background: #ff007e;
   height: 40px;
   font-weight: 600;
 }
