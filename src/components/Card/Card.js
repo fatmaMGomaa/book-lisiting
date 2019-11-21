@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { EditModeContext } from "../contexts/EditModeContext";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
+import EditButton from "../EditButton/EditButton";
 
 import "./Card.css";
 
@@ -15,16 +14,11 @@ const Card = props => {
       </div>
       <div className="card__info__div">
         <div className="top">
-          <h1>{props.item.title}</h1>
-          {editMode ? (
-            <Link to={`${props.url + props.item.id}/edit`} className="edit-btn">
-              <FontAwesomeIcon icon={faPencilAlt} size="xs" color="white" />
-              Edit
-            </Link>
-          ) : null}
+          <h3>{props.item.title}</h3>
+          {editMode ? <EditButton url={props.url} item={props.item} /> : null}
         </div>
 
-        <p>{props.item.description.substring(0, 300) + "..."}</p>
+        <p>{props.item.description.substring(0, 300) + " . . . . ."}</p>
       </div>
     </Link>
   );
