@@ -9,8 +9,8 @@ class SideBar extends React.Component {
     let { authors, categories } = this.context;
     return (
       <React.Fragment>
-        <SideNav name="Authors" items={authors} />
-        <SideNav name="Categories" items={categories} />
+        <SideNav name="Authors" items={authors} url="/author/" />
+        <SideNav name="Categories" items={categories} url="/category/" />
       </React.Fragment>
     );
   }

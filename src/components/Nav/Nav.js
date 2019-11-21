@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Nav = props => {
   if (Array.isArray(props.itemsArray) && props.itemsArray.length > 0) {
@@ -9,13 +9,13 @@ const Nav = props => {
           {props.itemsArray.map(item => {
             return (
               <li key={item.id} className="side-nav__li">
-                <Link
+                <NavLink
                   to={props.url + item.id}
                   id={item.id}
                   className="side-nav__a"
                 >
                   {item.name}
-                </Link>
+                </NavLink>
               </li>
             );
           })}
@@ -27,17 +27,17 @@ const Nav = props => {
       <nav>
         <ul>
           <li>
-            <Link to="#" className="btn">
+            <Link to="/book/new" className="btn">
               New Book
             </Link>
           </li>
           <li>
-            <Link to="#" className="btn">
+            <Link to="/author/new" className="btn">
               New Author
             </Link>
           </li>
           <li>
-            <Link to="#" className="btn">
+            <Link to="/category/new" className="btn">
               New Category
             </Link>
           </li>

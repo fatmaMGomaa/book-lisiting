@@ -15,3 +15,7 @@
 .side-nav__a {
   color: #4189c7;
 }
+
+.active {
+  color: #ff007e;
+}

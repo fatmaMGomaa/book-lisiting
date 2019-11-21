@@ -30,3 +30,17 @@
 .card__info__div h1 {
   font-size: 130%;
 }
+
+.card__info__div .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.edit-btn {
+  border-radius: 10px;
+  color: white;
+  background-color: #6db0c0;
+  padding: 5px;
+  height: 50%;
+}
