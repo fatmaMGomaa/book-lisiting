@@ -6,6 +6,7 @@ a {
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   color: #333333;
 }
 
@@ -14,7 +15,7 @@ a {
 }
 
 .app-container .right {
-  width: 70%;
+  width: 68%;
 }
 .app-container .left,
 .app-container .right {

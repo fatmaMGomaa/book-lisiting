@@ -1,0 +1,25 @@
+.details__img {
+  float: right;
+  height: 180px;
+  width: 200px;
+  display: block;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.details__ul {
+  list-style: none;
+  padding: 0;
+}
+.details__ul li {
+  margin: 5px;
+}
+.details__ul span {
+  font-weight: 800;
+}
+
+.details__p {
+  text-align: justify;
+}
