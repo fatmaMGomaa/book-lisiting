@@ -14,9 +14,14 @@ class Index extends React.Component {
   };
   render() {
     let { books, sortByName, sortByYear } = this.context;
-    let filteredBooks = books.filter(book =>
-      book["title"].toLowerCase().includes(this.state.searchText.toLowerCase())
+    let filteredBooks = books.filter(
+      book =>
+        book["title"]
+          .toLowerCase()
+          .includes(this.state.searchText.toLowerCase()) ||
+        book["isbn"].includes(this.state.searchText)
     );
+
     return (
       <React.Fragment>
         <div class="user-search">
