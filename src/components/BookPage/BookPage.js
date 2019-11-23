@@ -20,7 +20,7 @@ const BookPage = props => {
   };
   return (
     <React.Fragment>
-      <Details item={book}>
+      <Details>
         <div className="clearfix">
           <img src={book.image} alt={book.title} className="details__img" />
           <NameHeader url="/book/" item={book} />

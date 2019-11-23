@@ -23,26 +23,7 @@
 .main-header__nav ul li {
   display: inline-block;
 }
-.btn {
-  margin: 5px;
-  padding: 10px;
-  background: #008cfb;
-  outline: none;
-}
 
-.badge {
-  font-size: 80%;
-  background-color: #d4554e;
-  padding: 5px;
-  margin-left: 10px;
-  display: inline-block;
-}
-
-.btn,
-.badge {
-  border-radius: 7px;
-  border: none;
-}
 .main-header__nav button {
   height: 40px;
   font-weight: 600;

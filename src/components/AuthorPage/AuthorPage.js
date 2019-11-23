@@ -11,7 +11,7 @@ const AuthorPage = props => {
   const authorBooks = books.filter(book => book.author === authorId);
   return (
     <React.Fragment>
-      <Details url="/author/" item={author}>
+      <Details>
         <NameHeader url="/author/" item={author} />
         <h4>-- {author.jobTitle}</h4>
         <p>{author.bio}</p>
