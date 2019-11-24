@@ -14,6 +14,7 @@ class Index extends React.Component {
   };
   render() {
     let { books, sortByName, sortByYear } = this.context;
+    // I didn't make searching by author because the user can find them from the sidebar authors navegation
     let filteredBooks = books.filter(
       book =>
         book["title"]
@@ -21,10 +22,9 @@ class Index extends React.Component {
           .includes(this.state.searchText.toLowerCase()) ||
         book["isbn"].includes(this.state.searchText)
     );
-
     return (
       <React.Fragment>
-        <div class="user-search">
+        <div className="user-search top">
           <label>
             search:{" "}
             <input

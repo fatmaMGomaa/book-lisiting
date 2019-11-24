@@ -13,7 +13,7 @@ class CategoryPage extends React.Component {
     return (
       <React.Fragment>
         <NameHeader url="/category/" item={category} />
-        <CardsContainer itemsArray={categoryBooks} url="/book/" />;
+        <CardsContainer itemsArray={categoryBooks} url="/book/" />
       </React.Fragment>
     );
   }
