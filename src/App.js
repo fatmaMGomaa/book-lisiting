@@ -11,6 +11,7 @@ import AuthorPage from "./components/AuthorPage/AuthorPage";
 import DataContextProvider from "./components/contexts/DataContext";
 import EditModeContextProvider from "./components/contexts/EditModeContext";
 import CategoryForm from "./components/Forms/CategoryForm/CategoryForm";
+import AuthorForm from "./components/Forms/AuthorForm/AuthorForm";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Switch>
               <Route exact path="/" component={Index} />;
               <Route exact path={"/category/new"} component={CategoryForm} />
+              <Route exact path={"/author/new"} component={AuthorForm} />
               <Route exact path={"/book/:bookId"} component={BookPage} />
               <Route
                 exact
@@ -37,6 +39,11 @@ function App() {
                 component={CategoryForm}
               />
               <Route exact path={"/author/:authorId"} component={AuthorPage} />
+              <Route
+                exact
+                path={"/author/:authorId/edit"}
+                component={AuthorForm}
+              />
             </Switch>
           </div>
           <Footer />

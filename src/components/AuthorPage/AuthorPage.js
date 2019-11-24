@@ -16,7 +16,7 @@ const AuthorPage = props => {
         <h4>-- {author.jobTitle}</h4>
         <p>{author.bio}</p>
       </Details>
-      <CardsContainer itemsArray={authorBooks} url="/book/" />;
+      <CardsContainer itemsArray={authorBooks} url="/book/" />
     </React.Fragment>
   );
 };

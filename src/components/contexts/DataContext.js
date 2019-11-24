@@ -47,7 +47,7 @@ class DataContextProvider extends React.Component {
       const indexOfItem = this.state.books.findIndex(
         book => book.id === item.id
       );
-      if (indexOfItem) {
+      if (indexOfItem !== -1) {
         newItemsArray = this.state.books;
         newItemsArray[indexOfItem] = item;
         this.setState({
@@ -69,7 +69,7 @@ class DataContextProvider extends React.Component {
       const indexOfItem = this.state.authors.findIndex(
         author => author.id === item.id
       );
-      if (indexOfItem) {
+      if (indexOfItem !== -1) {
         newItemsArray = this.state.authors;
         newItemsArray[indexOfItem] = item;
         this.setState({

@@ -6,9 +6,9 @@ import BaseForm from "../BaseForm/BaseForm";
 import "../Form.css";
 const uuidv4 = require("uuid/v4");
 
-class CategoryForm extends React.Component {
+class AuthorForm extends React.Component {
   static contextType = DataContext;
-  state = { newItemName: "" };
+  state = { newItemName: "", newItemJobTitle: "", newItemBio: "" };
   componentDidMount() {
     this.handlGetItemsFromLocalstorage();
   }
@@ -26,16 +26,26 @@ class CategoryForm extends React.Component {
       [e.target.name]: e.target.value
     });
   };
-  handleNewCategory = e => {
+  handleNewAuthor = e => {
     e.preventDefault();
-    let newItem = { id: uuidv4(), name: this.state.newItemName };
-    this.context.addNewItem(newItem, "category");
+    let newItem = {
+      id: uuidv4(),
+      name: this.state.newItemName,
+      jobTitle: this.state.newItemJobTitle,
+      bio: this.state.newItemBio
+    };
+    this.context.addNewItem(newItem, "author");
     this.props.history.push(`/`);
   };
-  handleEditCategory = e => {
+  handleEditAuthor = e => {
     e.preventDefault();
-    let editedItem = { id: this.state.id, name: this.state.name };
-    this.context.editItem(editedItem, "category");
+    let editedItem = {
+      id: this.state.id,
+      name: this.state.name,
+      jobTitle: this.state.jobTitle,
+      bio: this.state.bio
+    };
+    this.context.editItem(editedItem, "author");
     localStorage.clear();
     this.props.history.push("/");
   };
@@ -47,8 +57,8 @@ class CategoryForm extends React.Component {
           if (editMode && this.state.actionType === "edit") {
             return (
               <BaseForm
-                handleSubmit={this.handleEditCategory}
-                title={`edit category: ${this.state.name}`}
+                handleSubmit={this.handleEditAuthor}
+                title={`edit author: ${this.state.name}`}
                 history={this.props.history}
               >
                 <label>
@@ -60,13 +70,31 @@ class CategoryForm extends React.Component {
                     value={this.state.name}
                   />
                 </label>
+                <label>
+                  job title
+                  <input
+                    type="text"
+                    onChange={this.handleInputChange}
+                    name="jobTitle"
+                    value={this.state.jobTitle}
+                  />
+                </label>
+                <label>
+                  bio
+                  <textarea
+                    rows="10"
+                    onChange={this.handleInputChange}
+                    name="bio"
+                    value={this.state.bio}
+                  ></textarea>
+                </label>
               </BaseForm>
             );
           } else {
             return (
               <BaseForm
-                handleSubmit={this.handleNewCategory}
-                title="add new category"
+                handleSubmit={this.handleNewAuthor}
+                title="add new author"
                 history={this.props.history}
               >
                 <label>
@@ -78,6 +106,24 @@ class CategoryForm extends React.Component {
                     value={this.state.newItemName}
                   />
                 </label>
+                <label>
+                  job title
+                  <input
+                    type="text"
+                    onChange={this.handleInputChange}
+                    name="newItemJobTitle"
+                    value={this.state.newItemJobTitle}
+                  />
+                </label>
+                <label>
+                  bio
+                  <textarea
+                    rows="10"
+                    onChange={this.handleInputChange}
+                    name="newItemBio"
+                    value={this.state.newItemBio}
+                  ></textarea>
+                </label>
               </BaseForm>
             );
           }
@@ -87,4 +133,4 @@ class CategoryForm extends React.Component {
   }
 }
 
-export default CategoryForm;
+export default AuthorForm;
