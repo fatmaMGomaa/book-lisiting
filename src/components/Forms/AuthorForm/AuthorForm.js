@@ -82,7 +82,7 @@ class AuthorForm extends React.Component {
                 <label>
                   bio
                   <textarea
-                    rows="10"
+                    rows="15"
                     onChange={this.handleInputChange}
                     name="bio"
                     value={this.state.bio}
@@ -118,7 +118,7 @@ class AuthorForm extends React.Component {
                 <label>
                   bio
                   <textarea
-                    rows="10"
+                    rows="15"
                     onChange={this.handleInputChange}
                     name="newItemBio"
                     value={this.state.newItemBio}

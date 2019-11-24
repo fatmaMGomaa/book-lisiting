@@ -3,6 +3,7 @@ import React from "react";
 class BaseForm extends React.Component {
   handleCancelButton = e => {
     e.preventDefault();
+    localStorage.clear();
     this.props.history.push(`/`);
   };
   render() {

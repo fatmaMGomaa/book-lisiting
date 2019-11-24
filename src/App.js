@@ -12,6 +12,7 @@ import DataContextProvider from "./components/contexts/DataContext";
 import EditModeContextProvider from "./components/contexts/EditModeContext";
 import CategoryForm from "./components/Forms/CategoryForm/CategoryForm";
 import AuthorForm from "./components/Forms/AuthorForm/AuthorForm";
+import BookForm from "./components/Forms/BookForm/BookForm";
 
 function App() {
   return (
@@ -27,7 +28,9 @@ function App() {
               <Route exact path="/" component={Index} />;
               <Route exact path={"/category/new"} component={CategoryForm} />
               <Route exact path={"/author/new"} component={AuthorForm} />
+              <Route exact path={"/book/new"} component={BookForm} />
               <Route exact path={"/book/:bookId"} component={BookPage} />
+              <Route exact path={"/book/:bookId/edit"} component={BookForm} />
               <Route
                 exact
                 path={"/category/:categoryId"}

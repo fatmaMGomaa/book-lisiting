@@ -1,6 +1,7 @@
 .form label,
 .form input,
-.form textarea {
+.form textarea,
+.form select {
   width: 98%;
   max-width: 98%;
 }
@@ -8,7 +9,8 @@
   color: #999999;
 }
 .form input,
-.form textarea {
+.form textarea,
+.form select {
   display: block;
   outline: none;
   border-radius: 5px;
@@ -21,7 +23,8 @@
   width: 110px;
   margin: 0 20px;
 }
-.form .cancel-btn {
+.form .cancel-btn,
+.form select {
   background-color: white;
   border: solid 1px #dddddd;
   color: #333333;
@@ -29,4 +32,13 @@
 .form .submit-btn,
 .form .cancel-btn {
   font-size: 110%;
+}
+.outer {
+  width: 99%;
+}
+.inner {
+  width: 50%;
+}
+.inner {
+  display: inline-block;
 }
