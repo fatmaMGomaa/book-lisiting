@@ -23,7 +23,8 @@ a {
   margin-top: 20px;
 }
 
-.top {
+.top,
+.user-search {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -32,9 +33,7 @@ a {
 .edit-btn {
   border-radius: 10px;
   background-color: #6db0c0;
-  padding: 5px;
-  height: 50%;
-  width: 60px;
+  padding: 7px;
   text-align: center;
   display: inline-block;
   font-size: 14px;
@@ -67,4 +66,41 @@ a {
 .user-search {
   border-bottom: 2px solid #999999;
   padding-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .btn {
+    margin: 5px;
+    padding: 7px;
+    font-size: 80%;
+  }
+  .app-container .right {
+    font-size: 90%;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .btn {
+    margin: 3px;
+    padding: 5px;
+  }
+  .user-search {
+    flex-wrap: wrap;
+  }
+  .user-search label,
+  .user-search input {
+    width: 100%;
+  }
+
+  .app-container .right {
+    width: 60%;
+  }
+  .app-container .left {
+    width: 30%;
+  }
+  .app-container .right {
+    font-size: 70%;
+  }
+  .right h2 .edit-btn {
+    font-size: 80%;
+  }
 }

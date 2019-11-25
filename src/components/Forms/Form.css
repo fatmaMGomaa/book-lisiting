@@ -42,3 +42,20 @@
 .inner {
   display: inline-block;
 }
+@media screen and (max-width: 768px) {
+  .inner {
+    width: 100%;
+  }
+  .form .submit-btn {
+    width: 90px;
+    margin: 0 10px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  .form {
+    font-size: 80%;
+  }
+  .form .submit-btn {
+    width: 80px;
+  }
+}

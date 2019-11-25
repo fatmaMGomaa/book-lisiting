@@ -24,7 +24,7 @@ class Index extends React.Component {
     );
     return (
       <React.Fragment>
-        <div className="user-search top">
+        <div className="user-search">
           <label>
             search:{" "}
             <input

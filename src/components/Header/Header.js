@@ -21,7 +21,7 @@ class Header extends React.Component {
         className="main-header"
         style={{ background: theTheme.headerColor }}
       >
-        <div>
+        <div className="main-header__h1__div">
           <Link to={`/`} className="main-header__h1">
             <h1>Book Listing </h1>
           </Link>
