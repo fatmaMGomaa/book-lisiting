@@ -77,8 +77,6 @@ class BookForm extends React.Component {
   };
 
   render() {
-    const { books, authors, categories } = this.context;
-
     return (
       <EditModeContext.Consumer>
         {editModeContext => {

@@ -1,19 +1,29 @@
 import React from "react";
 import CardsContainer from "../CardsContainer/CardsContainer";
 import { DataContext } from "../contexts/DataContext";
+import Pagination from "../Pagination/Pagination";
 
 class Index extends React.Component {
   static contextType = DataContext;
   state = {
-    searchText: ""
+    searchText: "",
+    currentPage: 1,
+    booksPerPage: 5
+  };
+  handleClick = event => {
+    this.setState({
+      currentPage: +event.target.id
+    });
   };
   handleSearchText = e => {
     this.setState({
       searchText: e.target.value
     });
   };
+  sortByName = this.context.sortByName;
+  sortByYear = this.context.sortByYear;
   render() {
-    let { books, sortByName, sortByYear } = this.context;
+    let { books } = this.context;
     // I didn't make searching by author because the user can find them from the sidebar authors navegation
     let filteredBooks = books.filter(
       book =>
@@ -22,6 +32,9 @@ class Index extends React.Component {
           .includes(this.state.searchText.toLowerCase()) ||
         book["isbn"].includes(this.state.searchText)
     );
+    const indexOfLastBook = this.state.currentPage * this.state.booksPerPage;
+    const indexOfFirstBook = indexOfLastBook - this.state.booksPerPage;
+    const currentBooks = filteredBooks.slice(indexOfFirstBook, indexOfLastBook);
     return (
       <React.Fragment>
         <div className="user-search">
@@ -34,15 +47,21 @@ class Index extends React.Component {
             />
           </label>
           <div>
-            <button onClick={sortByName} className="btn">
+            <button onClick={this.sortByName} className="btn">
               sort by name
             </button>
-            <button onClick={sortByYear} className="btn">
+            <button onClick={this.sortByYear} className="btn">
               sort by year
             </button>
           </div>
         </div>
-        <CardsContainer itemsArray={filteredBooks} url="/book/" />
+        <CardsContainer itemsArray={currentBooks} url="/book/" />
+        <Pagination
+          booksArray={filteredBooks}
+          booksPerPage={this.state.booksPerPage}
+          handleClick={this.handleClick}
+          currentPage={this.state.currentPage}
+        />
       </React.Fragment>
     );
   }
