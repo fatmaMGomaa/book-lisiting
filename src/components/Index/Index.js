@@ -1,7 +1,6 @@
 import React from "react";
 import CardsContainer from "../CardsContainer/CardsContainer";
 import { DataContext } from "../contexts/DataContext";
-import Pagination from "../Pagination/Pagination";
 
 class Index extends React.Component {
   static contextType = DataContext;
