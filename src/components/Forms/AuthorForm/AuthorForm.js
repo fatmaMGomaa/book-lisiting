@@ -64,6 +64,7 @@ class AuthorForm extends React.Component {
                 <label>
                   name
                   <input
+                    required
                     type="text"
                     onChange={this.handleInputChange}
                     name="name"
@@ -73,6 +74,7 @@ class AuthorForm extends React.Component {
                 <label>
                   job title
                   <input
+                    required
                     type="text"
                     onChange={this.handleInputChange}
                     name="jobTitle"
@@ -82,6 +84,7 @@ class AuthorForm extends React.Component {
                 <label>
                   bio
                   <textarea
+                    required
                     rows="15"
                     onChange={this.handleInputChange}
                     name="bio"
@@ -100,6 +103,7 @@ class AuthorForm extends React.Component {
                 <label>
                   name
                   <input
+                    required
                     type="text"
                     onChange={this.handleInputChange}
                     name="newItemName"
@@ -109,6 +113,7 @@ class AuthorForm extends React.Component {
                 <label>
                   job title
                   <input
+                    required
                     type="text"
                     onChange={this.handleInputChange}
                     name="newItemJobTitle"
@@ -118,6 +123,7 @@ class AuthorForm extends React.Component {
                 <label>
                   bio
                   <textarea
+                    required
                     rows="15"
                     onChange={this.handleInputChange}
                     name="newItemBio"

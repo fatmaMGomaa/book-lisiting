@@ -54,6 +54,7 @@ class CategoryForm extends React.Component {
                 <label>
                   name
                   <input
+                    required
                     type="text"
                     onChange={this.handleInputChange}
                     name="name"
@@ -72,6 +73,7 @@ class CategoryForm extends React.Component {
                 <label>
                   name
                   <input
+                    required
                     type="text"
                     onChange={this.handleInputChange}
                     name="newItemName"
