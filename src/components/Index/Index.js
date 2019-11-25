@@ -32,9 +32,7 @@ class Index extends React.Component {
           .includes(this.state.searchText.toLowerCase()) ||
         book["isbn"].includes(this.state.searchText)
     );
-    const indexOfLastBook = this.state.currentPage * this.state.booksPerPage;
-    const indexOfFirstBook = indexOfLastBook - this.state.booksPerPage;
-    const currentBooks = filteredBooks.slice(indexOfFirstBook, indexOfLastBook);
+
     return (
       <React.Fragment>
         <div className="user-search">
@@ -55,9 +53,9 @@ class Index extends React.Component {
             </button>
           </div>
         </div>
-        <CardsContainer itemsArray={currentBooks} url="/book/" />
-        <Pagination
-          booksArray={filteredBooks}
+        <CardsContainer
+          itemsArray={filteredBooks}
+          url="/book/"
           booksPerPage={this.state.booksPerPage}
           handleClick={this.handleClick}
           currentPage={this.state.currentPage}
