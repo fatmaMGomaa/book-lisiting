@@ -24,7 +24,7 @@ const CardsContainer = props => {
       </div>
     );
   } else {
-    return null;
+    return <h3>no books</h3>;
   }
 };
 

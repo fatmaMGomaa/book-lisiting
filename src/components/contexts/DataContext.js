@@ -33,7 +33,6 @@ class DataContextProvider extends React.Component {
       this.setState({
         categories: [...this.state.categories, item]
       });
-      console.log(this.state.categories);
     } else if (type === "author") {
       this.setState({
         authors: [...this.state.authors, item]

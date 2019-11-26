@@ -98,8 +98,8 @@ class BookForm extends React.Component {
                     value={this.state.title}
                   />
                 </label>
-                <div class="outer">
-                  <div class="inner">
+                <div className="outer">
+                  <div className="inner">
                     <label>
                       category
                       <select
@@ -122,7 +122,7 @@ class BookForm extends React.Component {
                       </select>
                     </label>
                   </div>
-                  <div class="inner">
+                  <div className="inner">
                     <label>
                       author
                       <select
@@ -166,8 +166,8 @@ class BookForm extends React.Component {
                     value={this.state.isbn}
                   />
                 </label>
-                <div class="outer">
-                  <div class="inner">
+                <div className="outer">
+                  <div className="inner">
                     <label>
                       no of page
                       <input
@@ -179,7 +179,7 @@ class BookForm extends React.Component {
                       />
                     </label>
                   </div>
-                  <div class="inner">
+                  <div className="inner">
                     <label>
                       year puplished
                       <input
@@ -221,8 +221,8 @@ class BookForm extends React.Component {
                     value={this.state.newItemTitle}
                   />
                 </label>
-                <div class="outer">
-                  <div class="inner">
+                <div className="outer">
+                  <div className="inner">
                     <label>
                       category
                       <select
@@ -245,7 +245,7 @@ class BookForm extends React.Component {
                       </select>
                     </label>
                   </div>
-                  <div class="inner">
+                  <div className="inner">
                     <label>
                       author
                       <select
@@ -289,8 +289,8 @@ class BookForm extends React.Component {
                     value={this.state.newItemIsbn}
                   />
                 </label>
-                <div class="outer">
-                  <div class="inner">
+                <div className="outer">
+                  <div className="inner">
                     <label>
                       no of page
                       <input
@@ -302,7 +302,7 @@ class BookForm extends React.Component {
                       />
                     </label>
                   </div>
-                  <div class="inner">
+                  <div className="inner">
                     <label>
                       year puplished
                       <input
